@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p> 3 </p>
+    <script type='text/javascript'>
+        var a = 'аАеЕуУюЮэЭяЯыЫиИоО';
+        var s = prompt('Введите фамилию');
+        var n = s.length;
+        var counter = 0;
+        alert('Ваша фамилия - ' + s + ' в ней букв - ' + n);
+        var arr = a.split("");
+        var str = s.split("");
+        for (var i in str) {
+            for (var j in arr) {
+                if (str[i] == arr[j]) {
+                    counter = counter + 1;
+                }
+            }
+        }
+        alert('В вашей фамилии ' + counter + ' гласных и ' + (n - counter) + ' согласных');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p> 4 </p>
+    <script type='text/javascript'>
+        var s = prompt('Введите строку');
+        var n = s.length;
+        if (n < 20) {
+            alert('В вашей строке меньше 20 символов');
+        } else {
+            var counter = 0;
+            alert('Ваша строка - ' + s);
+            var str = s.split("");
+            flag = str[4];
+            for (var i in str) {
+                if (str[i] == flag) {
+                    counter = counter + 1;
+                }
+            }
+        }
+        alert('В вашей строке ' + counter + ' символов ' + flag + ' (5)');
+    </script>
+</body>
+
+</html>

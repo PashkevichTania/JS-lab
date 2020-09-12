@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p> 5 </p>
+    <script type='text/javascript'>
+        var x = parseFloat(prompt('Введите первое вещественное положительное число'));
+        var y = parseFloat(prompt('Введите второе вещественное положительное число'));
+
+        var n = parseInt(prompt('1-сложение  2-вычитание  3-умножение  4-деление'));
+
+        switch (n) {
+            case 1:
+                alert('Сумма = ' + (x + y));
+                break;
+            case 2:
+                alert('Разность = ' + (x - y));
+                break;
+            case 3:
+                alert('Произведение = ' + (x * y));
+                break;
+            case 4:
+                alert('Деление = ' + (x / y));
+                break;
+            default:
+                alert('Ошибка');
+        }
+    </script>
+</body>
+
+</html>
