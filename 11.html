@@ -1,0 +1,39 @@
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p> 11 </p>
+    <script type='text/javascript'>
+        var str = prompt('Введите строку');
+        str = str.replace(/[^\w\s]|_/g, "")
+         .replace(/\s+/g, " ");
+        alert(str);
+        var s1 = str.split(' ');
+        var c=0;
+        var max = 0;
+        var min = 999;
+        var arr=[];
+        for(i in s1){
+        
+            arr.push(s1[i].length);
+        }
+        for(i in arr){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+            if(arr[i]<min){
+                min= arr[i];
+            }
+            c = c +arr[i];
+        }
+        //max = Math.max(arr);
+        //min = Math.min(arr);
+        var avg = c/s1.length;
+        alert(s1);
+        alert("Длинна строки "+(s1.length)+" слов"+"\nДлинна максимального слова ="+max+"\nДлинна минимального ="+min+"\nСредняя длинна ="+avg.toFixed(2));
+    </script>
+</body>
+
+</html>
