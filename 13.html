@@ -1,0 +1,54 @@
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p> 13 </p>
+    <div id="txt1"></div>
+    <div id="txt2"></div>
+    <div id="txt3"></div>
+    <div id="txt4"></div>
+    <div id="txt5"></div>
+    <div id="txt6"></div>
+    <script type='text/javascript'>
+        var str = prompt('Enter ur email');
+        var flag = 0;
+        a = str.indexOf("@");
+        d = str.indexOf(".");
+        l = str.length;
+        s1 = str.slice(0, a);
+        dotslice = str.slice(d + 1);
+        ddslice = str.slice(a + 1, d);
+        alert(ddslice);
+        if (a == -1) {
+            document.getElementById('txt1').innerHTML = 'there is no @ in ur email';
+            flag++;
+        }
+        if (l < 6) {
+            document.getElementById('txt2').innerHTML = 'ur email must be at least 6 symbols';
+            flag++;
+        }
+        if (s1.length < 1) {
+            document.getElementById('txt3').innerHTML = 'there must be symbols before @';
+            flag++;
+        }
+        if (d < a) {
+            document.getElementById('txt4').innerHTML = 'there must be dot after @';
+            flag++;
+        }
+        if (dotslice.length < 2) {
+            document.getElementById('txt5').innerHTML = 'there must be at least 2 symbols after dot';
+            flag++;
+        }
+        if (ddslice.length < 2) {
+            document.getElementById('txt6').innerHTML = 'there must be at least 2 symbols between @ and dot';
+            falg++;
+        }
+        if (flag == 0) {
+            alert("everything fine");
+        }
+        //alert(flag);
+    </script>
+</body>
+
+</html>
