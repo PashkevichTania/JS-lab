@@ -1,0 +1,19 @@
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p> 12 </p>
+    <script type='text/javascript'>
+        var str = prompt('Введите строку');
+        str = str.replace(/\s/g, '');
+        var a = str.split('').reverse().join('');
+        if (a == str) {
+            alert("Строка палиндром");
+        } else {
+            alert("Строка не палиндром");
+        }
+    </script>
+</body>
+
+</html>
